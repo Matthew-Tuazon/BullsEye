@@ -55,9 +55,10 @@ class ViewController: UIViewController {
         slider.value = Float(currentValue)
     }
     
-    func updateLabels() { 
+    func updateLabels() {
         targetLabel.text = "\(targetValue)"
     }
     
 }
+
 
