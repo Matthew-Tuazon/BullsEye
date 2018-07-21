@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewGame()
+        startNewRound()
         updateLabels()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -47,20 +47,9 @@ class ViewController: UIViewController {
 
     @IBAction func showAlert(){
         
-      let difference = abs(currentValue - targetValue) //abs() func that takes abs value, so we can skip the following
+      let difference = abs(currentValue - targetValue) //abs() func that takes abs value
+        
       var points = 100 - difference
-      //roundNumber += 1
-      
-//        if difference < 0 {
-//            difference *= -1
-//        }
-//        if currentValue > targetValue { //difference is score for round
-//            difference = currentValue - targetValue
-//        } else if targetValue > currentValue {
-//            difference = targetValue - currentValue
-//        } else {
-//            difference = 0
-//        }
         
         if difference == 0 {
             messageTitle = "Perfect!"
@@ -84,6 +73,7 @@ class ViewController: UIViewController {
         )
         
         //alert message's button user's tap on, as a confirmation to seeing the message.
+        
         let action = UIAlertAction(title:"OK", style: .default, handler: {action in //closure, only performed when "OK" is tapped
             
             self.startNewRound() //self needed in closure, to refer to view controller
@@ -103,18 +93,19 @@ class ViewController: UIViewController {
         print("The slider's current value is:  \(sender.value) ") 
     }
     
-    func startNewRound(){ //randomizes target Value from 1-100, default value at 50 at start, slider value equals where one places it
-        roundNumber += 1
-        targetValue = 1 + Int(arc4random_uniform(100))
-        currentValue = 50
-        slider.value = Float(currentValue)
-    }
+  
     
     @IBAction func startOver(_ sender: Any) {
         startNewGame()
         updateLabels()
     }
     
+    func startNewRound(){ //randomizes target Value from 1-100, default value at 50 at start, slider value equals where one places it
+        roundNumber += 1
+        targetValue = 1 + Int(arc4random_uniform(100))
+        currentValue = 50
+        slider.value = Float(currentValue)
+    }
     
     func startNewGame(){
         roundNumber = 0

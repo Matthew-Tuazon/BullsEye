@@ -14,6 +14,7 @@
 		9A53190720FE94A500FFBACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A53190520FE94A500FFBACD /* LaunchScreen.storyboard */; };
 		9A53191220FE94A500FFBACD /* BullsEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53191120FE94A500FFBACD /* BullsEyeTests.swift */; };
 		9A53191D20FE94A600FFBACD /* BullsEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53191C20FE94A600FFBACD /* BullsEyeUITests.swift */; };
+		9A5516F62103CE8C009919EB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5516F52103CE8C009919EB /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9A53191820FE94A600FFBACD /* BullsEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullsEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A53191C20FE94A600FFBACD /* BullsEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeUITests.swift; sourceTree = "<group>"; };
 		9A53191E20FE94A600FFBACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A5516F52103CE8C009919EB /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		9A5318FB20FE94A500FFBACD /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				9A5516F52103CE8C009919EB /* AboutViewController.swift */,
 				9A5318FC20FE94A500FFBACD /* AppDelegate.swift */,
 				9A5318FE20FE94A500FFBACD /* ViewController.swift */,
 				9A53190020FE94A500FFBACD /* Main.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A5516F62103CE8C009919EB /* AboutViewController.swift in Sources */,
 				9A5318FF20FE94A500FFBACD /* ViewController.swift in Sources */,
 				9A5318FD20FE94A500FFBACD /* AppDelegate.swift in Sources */,
 			);
