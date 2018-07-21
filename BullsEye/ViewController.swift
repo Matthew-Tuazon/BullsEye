@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
+    @IBOutlet weak var startNewGameButton: UIButton!
+    
     
     
   //  var currentValue: Int = 0 // Swift's "Type inference" allows no need to declare value as an int, as 0 is a whole number (integer)
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
         updateLabels()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -100,11 +102,24 @@ class ViewController: UIViewController {
         currentValue = lroundf(sender.value)
         print("The slider's current value is:  \(sender.value) ") 
     }
+    
     func startNewRound(){ //randomizes target Value from 1-100, default value at 50 at start, slider value equals where one places it
         roundNumber += 1
         targetValue = 1 + Int(arc4random_uniform(100))
         currentValue = 50
         slider.value = Float(currentValue)
+    }
+    
+    @IBAction func startOver(_ sender: Any) {
+        startNewGame()
+        updateLabels()
+    }
+    
+    
+    func startNewGame(){
+        roundNumber = 0
+        score = 0
+        startNewRound()
     }
     
     func updateLabels() {

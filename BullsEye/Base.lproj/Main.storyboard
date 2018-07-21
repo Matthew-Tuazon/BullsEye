@@ -64,6 +64,9 @@
                                 <rect key="frame" x="56" y="270" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="startOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYe-LG-0UQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr2-Z5-5TY">
                                 <rect key="frame" x="175" y="275" width="56" height="21"/>
@@ -105,6 +108,7 @@
                         <outlet property="roundLabel" destination="J4M-f6-bHN" id="Jvt-g5-P46"/>
                         <outlet property="scoreLabel" destination="AGP-3x-tl2" id="wXb-Qm-YXG"/>
                         <outlet property="slider" destination="4cZ-QV-MYj" id="SUF-Zp-NWU"/>
+                        <outlet property="startNewGameButton" destination="hHJ-bl-fab" id="nFr-Tx-zHT"/>
                         <outlet property="targetLabel" destination="8rb-Xf-n8F" id="a0b-Ae-dds"/>
                     </connections>
                 </viewController>
