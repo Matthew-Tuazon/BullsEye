@@ -82,13 +82,18 @@ class ViewController: UIViewController {
         )
         
         //alert message's button user's tap on, as a confirmation to seeing the message.
-        let action = UIAlertAction(title:"OK", style: .default, handler: nil)
+        let action = UIAlertAction(title:"OK", style: .default, handler: {action in //closure, only performed when "OK" is tapped
+            
+            self.startNewRound() //self needed in closure, to refer to view controller
+            self.updateLabels()
+        })
         
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        startNewRound()
-        updateLabels()
+        
+//        startNewRound()
+//        updateLabels()
     }
     
     @IBAction func sliderMoved(_ sender: UISlider) {
