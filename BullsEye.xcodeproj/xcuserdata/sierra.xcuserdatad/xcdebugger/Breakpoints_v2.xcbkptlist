@@ -10,7 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BullsEye/ViewController.swift"
+<<<<<<< HEAD
             timestampString = "553557865.801195"
+=======
+            timestampString = "553829151.565046"
+>>>>>>> b0b9205... Changing Authors from local MacOS to Github Account
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
