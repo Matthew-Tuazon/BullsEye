@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     var currentValue: Int = 0
     var targetValue: Int = 0
+    var difference: Int
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +34,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert(){
+        
+        if currentValue > targetValue { //difference is score for round
+            difference = currentValue - targetValue
+        } else if targetValue > currentValue {
+            diference = targetValue - currentValue
+        } else {
+            difference = 0
+        }
+        
         //alert message's message
-        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)"
+        let message = "The value of the slider is: \(currentValue)" + "\nThe target value is: \(targetValue)" + "\nThe difference is: \(difference)"
         let alert = UIAlertController(title: "Hello, World", message: message, preferredStyle: .alert
         )
         
