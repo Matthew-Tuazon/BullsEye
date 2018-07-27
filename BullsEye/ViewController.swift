@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
     
@@ -127,6 +128,13 @@ class ViewController: UIViewController {
         roundNumber = 0
         score = 0
         startNewRound()
+        
+        //adds subtle crossfade animation
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        view.layer.add(transition, forKey: nil)
     }
     
     func updateLabels() {
